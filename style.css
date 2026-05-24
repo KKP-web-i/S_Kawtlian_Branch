@@ -296,10 +296,14 @@ footer{
 }
 
 .top-logo{
-    width:100px;
-    position:absolute;
-    top:20px;
-    left:20px;
+  width:80px;
+
+  position:absolute;
+  top:15px;
+  left:20px;
+
+  z-index:1000;
+}
 }
 
 body{
@@ -417,10 +421,13 @@ color:white;
   }
 
   nav{
-    padding-top:100px;
-    flex-direction:column;
-    gap:15px;
-  }
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px 10%;
+  position:relative;
+}
 
   nav ul{
     display:flex;
