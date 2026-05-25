@@ -304,7 +304,6 @@ footer{
 
   z-index:1000;
 }
-}
 
 body{
     margin:0;
@@ -446,4 +445,21 @@ color:white;
     padding:0 10px;
   }
 
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+
+  padding:12px 28px;
+  background:#2c2c2b;
+  color:black;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.btn-icon{
+  width:22px;
+  height:22px;
 }
