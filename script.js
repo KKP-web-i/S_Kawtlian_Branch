@@ -1,37 +1,52 @@
-function openImage(src){
+function openImage(src) {
 
   document.getElementById("lightbox").style.display = "flex";
 
   document.getElementById("lightbox-img").src = src;
-
 }
 
-function closeImage(){
+function closeImage() {
 
   document.getElementById("lightbox").style.display = "none";
-
 }
+
+
+// HERO PARALLAX EFFECT
 
 const hero = document.querySelector("header");
 
 document.addEventListener("mousemove", (e) => {
 
-    let x = e.clientX / window.innerWidth;
-    let y = e.clientY / window.innerHeight;
+    if(hero){
 
-    hero.style.backgroundPosition =
-    `${50 + x * 10}% ${50 + y * 10}%`;
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;
+
+      hero.style.backgroundPosition =
+      `${50 + x * 10}% ${50 + y * 10}%`;
+
+    }
 
 });
 
-function openImage(src){
 
-  document.getElementById("lightbox").style.display = "flex";
+// AUTO LOAD GALLERY IMAGES
 
-  document.getElementById("lightbox-img").src = src;
-}
+const gallery = document.getElementById("gallery");
 
-function closeImage(){
+if (gallery) {
 
-  document.getElementById("lightbox").style.display = "none";
+    for (let i = 1; i <= 58; i++) {
+
+        const img = document.createElement("img");
+
+        img.src = `images3/${i}.JPG`;
+
+        img.onclick = function () {
+            openImage(this.src);
+        };
+
+        gallery.appendChild(img);
+    }
+
 }
