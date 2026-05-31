@@ -50,27 +50,28 @@ nav ul li a:hover{
 /* HERO */
 
 .hero{
-    min-height: calc(100vh - 100px);
+  min-height:calc(75vh - 120px);
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+  display:flex;
+  flex-direction:column;
 
-    text-align:center;
+  justify-content:center;
+  align-items:center;
 
-    padding:20px;
+  text-align:center;
+
+  transform:translateY(-40px);
 }
 
 .hero h2{
-  font-size:55px;
+  font-size:clamp(2rem, 5vw, 3.5rem);
 }
+
 .hero h3{
   font-size:80px;
 }
 .hero p{
-  font-size:22px;
-  margin:15px 0;
+  font-size:clamp(1rem, 2vw, 1.4rem);
 }
 
 /* BUTTON */
@@ -353,7 +354,7 @@ body{
 }
 
 header{
-  height:100vh;
+  height:75vh;
 
   background:
   linear-gradient(rgba(0,0,0,0.6),
@@ -361,7 +362,7 @@ header{
   url('background.png');
 
   background-size:cover;
-  background-position:center;
+  background-position:center 25%;
 
   transition:background-position 0.1s;
 
