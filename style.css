@@ -485,7 +485,7 @@ body{
   .top-logo{
     width:70px;
     top:15px;
-    left:15px;
+    left:25px;
     z-index:1000;
   }
 
@@ -510,7 +510,7 @@ body{
   }
 
   .logo{
-    font-size:22px;
+    font-size:15px;
     text-align:center;
     padding:0 10px;
   }
@@ -530,8 +530,8 @@ body{
 }
 
 .btn-icon{
-  width:22px;
-  height:22px;
+  width:40px;
+  height:40px;
 }
 
 @media (max-width:768px){
@@ -581,7 +581,7 @@ body{
   }
 
   .hero h2{
-    font-size:28px;
+    font-size:clamp(2rem, 5vw, 3.5rem);
   }
 
   .btn{
