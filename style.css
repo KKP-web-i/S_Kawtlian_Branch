@@ -64,6 +64,11 @@ nav ul li a:hover{
   font-size:55px;
 }
 
+.hero h3{
+  font-size:80px;
+  margin-top:10px;
+}
+
 .hero p{
   font-size:22px;
   margin:15px 0;
@@ -168,32 +173,25 @@ nav ul li a:hover{
 }
 
 .card{
-    background:white;
-    color:black;
-
-    padding:15px;
-    border-radius:15px;
-
-    text-align:center;
-
-    min-height:250px;
-
     display:flex;
     flex-direction:column;
-
-    justify-content:flex-start;
     align-items:center;
-
-    gap:5px;
 }
 
-.card img{
-    width:150px;
-    height:150px;
+.card-title{
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
 
-    object-fit:cover;
-
-    border-radius:10px;
+.card-name{
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 
 /* GALLERY */
