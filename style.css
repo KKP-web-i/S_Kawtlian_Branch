@@ -173,10 +173,10 @@ nav ul li a:hover{
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns:repeat(3, 1fr);
     gap:20px;
 
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
 }
 
@@ -215,18 +215,26 @@ nav ul li a:hover{
 .card-title{
     font-size:20px;
     font-weight:700;
-
     color:#1f1e35;
-
     letter-spacing:2px;
+
+    min-height:50px; /* keeps all titles same height */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 
 .card-name{
-    font-size:18px;
+    font: size 15px;x;
     font-weight:600;
     color:#353188;
 
-    margin:10px 0;
+    min-height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 
 /* GALLERY */
@@ -502,10 +510,17 @@ body{
 }
 
 
-.hero-btns {
-  display: flex;
-  gap: 15px;   /* space between buttons */
-  align-items: center;
+.hero-btns{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  flex-wrap:nowrap;
+}
+
+.btn{
+  flex-shrink:0;
 }
 
 .about-box{
@@ -609,31 +624,45 @@ body{
 
 @media(max-width:768px){
 
-  header{
-    min-height:100vh;
-  }
-
   .top-logo{
-    width:55px;
+    width:45px;
     top:10px;
     left:10px;
   }
 
   nav{
-    flex-direction:column;
+    display:flex;
+    justify-content:space-between;
     align-items:center;
-    text-align:center;
-    padding:70px 15px 15px;
+    padding:10px 15px;
   }
 
   .logo{
-    font-size:20px;
+    font-size:11px;
+    margin-left:50px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
   }
 
   nav ul{
-    flex-direction:column;
-    gap:10px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:5px;
+    margin:0;
   }
+
+  nav ul li{
+    margin:0;
+  }
+
+  nav ul li a{
+    font-size:9px;
+    padding:2px 4px;
+  }
+
+}
 
   .hero{
     transform:none;
@@ -653,9 +682,12 @@ body{
     grid-template-columns:1fr;
   }
 
+  @media(max-width:768px){
+
   .cards{
-    grid-template-columns:1fr;
-  }
+    grid-template-columns:repeat(2, 1fr);
+}
+
 
   .card img{
     height:220px;
